@@ -1,0 +1,11 @@
+c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\KendoGridBinder.Examples.dll
+c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\KendoGridBinder.Examples.pdb
+c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\EntityFramework.dll
+c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\KendoGridBinder.dll
+c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\WebActivator.dll
+c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\Dynamic.dll
+c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\KendoGridBinder.pdb
+c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\EntityFramework.xml
+c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\obj\Release\ResolveAssemblyReference.cache
+c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\obj\Release\KendoGridBinder.Examples.dll
+c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\obj\Release\KendoGridBinder.Examples.pdb
