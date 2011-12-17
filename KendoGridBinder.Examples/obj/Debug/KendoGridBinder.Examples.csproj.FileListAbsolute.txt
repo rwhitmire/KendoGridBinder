@@ -30,4 +30,6 @@ C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBin
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\obj\Debug\KendoGridBinder.Examples.dll
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\obj\Debug\KendoGridBinder.Examples.pdb
-C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\App_Data\KendoData.sdf
+C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\KendoGridBinder.pdb
+C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\AutoMapper.dll
+C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\AutoMapper.xml

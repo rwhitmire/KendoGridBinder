@@ -19,6 +19,19 @@ namespace KendoGridBinder
                 .Take(request.Take);
         }
 
+        public KendoGrid(KendoGridRequest request, IEnumerable<T> list)
+        {
+            data = list.AsQueryable()
+                .Where(request.Filtering)
+                .OrderBy(request.Sorting).ToList();
+
+            total = data.Count();
+
+            data = data
+                .Skip(request.Skip)
+                .Take(request.Take);
+        }
+
         public IEnumerable<T> data { get; set; }
         public int total { get; set; }
     }

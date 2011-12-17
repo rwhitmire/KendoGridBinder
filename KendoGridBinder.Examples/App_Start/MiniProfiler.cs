@@ -1,5 +1,5 @@
-//[assembly: WebActivator.PreApplicationStartMethod(typeof(KendoGridBinder.Examples.App_Start.MiniProfilerPackage), "PreStart")]
-//[assembly: WebActivator.PostApplicationStartMethod(typeof(KendoGridBinder.Examples.App_Start.MiniProfilerPackage), "PostStart")]
+[assembly: WebActivator.PreApplicationStartMethod(typeof(KendoGridBinder.Examples.App_Start.MiniProfilerPackage), "PreStart")]
+[assembly: WebActivator.PostApplicationStartMethod(typeof(KendoGridBinder.Examples.App_Start.MiniProfilerPackage), "PostStart")]
 
 namespace KendoGridBinder.Examples.App_Start 
 {
