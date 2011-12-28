@@ -4,10 +4,8 @@ c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGr
 c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder\obj\Release\KendoGridBinder.dll
 c:\users\rwhitmire\documents\visual studio 2010\Projects\KendoGridBinder\KendoGridBinder\obj\Release\KendoGridBinder.pdb
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder\bin\Release\KendoGridBinder.dll
-C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder\bin\Release\KendoGridBinder.pdb
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder\bin\Release\Dynamic.dll
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder\bin\Release\Microsoft.Web.Infrastructure.dll
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder\bin\Release\WebActivator.dll
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder\obj\Release\ResolveAssemblyReference.cache
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder\obj\Release\KendoGridBinder.dll
-C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder\obj\Release\KendoGridBinder.pdb

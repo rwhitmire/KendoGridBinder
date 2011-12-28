@@ -54,23 +54,23 @@
             switch (op)
             {
                 case "eq":
-                    exStr = string.Format("{0} == {1}", field, param);
+                    exStr = string.Format("{0}.ToLower() == {1}.ToLower()", field, param);
                     break;
 
                 case "neq":
-                    exStr = string.Format("{0} != {1}", field, param);
+                    exStr = string.Format("{0}.ToLower() != {1}.ToLower()", field, param);
                     break;
 
                 case "contains":
-                    exStr = string.Format("{0}.Contains({1})", field, param);
+                    exStr = string.Format("{0}.ToLower().Contains({1}.ToLower())", field, param);
                     break;
 
                 case "startswith":
-                    exStr = string.Format("{0}.StartsWith({1})", field, param);
+                    exStr = string.Format("{0}.ToLower().StartsWith({1}.ToLower())", field, param);
                     break;
 
                 case "endswith":
-                    exStr = string.Format("{0}.EndsWith({1})", field, param);
+                    exStr = string.Format("{0}.ToLower().EndsWith({1}.ToLower())", field, param);
                     break;
             }
 
