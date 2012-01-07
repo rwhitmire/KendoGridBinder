@@ -1,52 +1,66 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Grid Example";
 }
 
 <div id="grid"></div>
 
 <script type="text/javascript">
-    var url = '@Url.Action("Grid")';
 
-    var dataSource = new kendo.data.DataSource({
-        serverPaging: true,
-        serverSorting: true,
-        serverFiltering: true,
-        pageSize: 200,
-        transport: {
-            read: {
-                type: 'post',
-                dataType: 'json',
-                url: url
-            }
-        },
-        schema: {
-            data: 'data',
-            total: 'total',
-            model: {
-                id: 'EmployeeId',
-                fields: {
-                    FirstName: { type: 'string' },
-                    LastName: { type: 'string' },
-                    Email: { type: 'string' }
+    var dateRegExp = /^\/Date\((.*?)\)\/$/;
+
+    function toDate(value) {
+        var date = dateRegExp.exec(value);
+        return new Date(parseInt(date[1]));
+    }
+
+    $(document).ready(function() {
+        var url = '@Url.Action("Grid")';
+
+        var dataSource = new kendo.data.DataSource({
+            serverPaging: true,
+            serverSorting: true,
+            serverFiltering: true,
+            pageSize: 20,
+            transport: {
+                read: {
+                    type: 'post',
+                    dataType: 'json',
+                    url: url
+                }
+            },
+            schema: {
+                data: 'data',
+                total: 'total',
+                model: {
+                    id: 'EmployeeId',
+                    fields: {
+                        Name: { type: 'string' },
+                        Email: { type: 'string' },
+                        EmployeeNumber: { type: 'number' },
+                        HireDate: { type: 'date' },
+                        Active: { type: 'boolean' }
+                    }
                 }
             }
-        }
-    });
+        });
 
-    $('#grid').kendoGrid({
-        dataSource: dataSource,
-        height: 400,
-        columns: [
-            { field: 'FirstName', title: 'First Name' },
-            { field: 'LastName', title: 'Last Name' },
-            { field: 'Email', title: 'Email' }
-        ],
-        filterable: true,
-        sortable: {
-            mode: 'multiple'
-        },
-        scrollable: {
-            virtual: true
-        }
+        $('#grid').kendoGrid({
+            dataSource: dataSource,
+            height: 400,
+            columns: [
+                { field: 'Name', title: 'Name' },
+                { field: 'Email' },
+                { field: 'EmployeeNumber', title: 'Emplyee #' },
+                { field: 'HireDate', title: 'Hire Date', template: '#= kendo.toString(toDate(HireDate), "MM/dd/yyyy")#' },
+                { field: 'Active' }
+            ],
+            filterable: true,
+            sortable: {
+                mode: 'multiple'
+            },
+            pageable: true
+        });
     });
+    
+
 </script>

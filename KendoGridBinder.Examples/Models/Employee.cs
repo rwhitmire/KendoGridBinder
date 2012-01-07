@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Web.Script.Serialization;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace KendoGridBinder.Examples.Models
 {
@@ -7,21 +7,18 @@ namespace KendoGridBinder.Examples.Models
     {
         public int EmployeeId { get; set; }
 
-        public int OfficeId { get; set; }
-
         [Required]
         [StringLength(50)]
-        public string FirstName { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string LastName { get; set; }
+        public string Name { get; set; }
 
         [Required]
         [StringLength(100)]
         public string Email { get; set; }
 
-        [ScriptIgnore]
-        public virtual Office Office { get; set; }
+        public int EmployeeNumber { get; set; }
+
+        public DateTime HireDate { get; set; }
+
+        public bool Active { get; set; }
     }
 }

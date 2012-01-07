@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using KendoGridBinder.Containers;
 
 namespace KendoGridBinder
 {
@@ -32,8 +33,8 @@ namespace KendoGridBinder
                                     x != "filter[logic]"
                               select x).ToList();
 
-            var filtering = GetFiltering(filterKeys, filterLogic);
-            var sorting = GetSorting(sortKeys);
+            var filtering = GetFilterObjects(filterKeys, filterLogic);
+            var sorting = GetSortObjects(sortKeys);
 
             var gridObject = new KendoGridRequest
             {
@@ -41,41 +42,47 @@ namespace KendoGridBinder
                 Skip = skip,
                 Page = page,
                 PageSize = pageSize,
-                Filtering = filtering,
-                Sorting = sorting
+                FilterObjectWrapper = filtering,
+                SortObjects = sorting
             };
 
             return gridObject;
         }
 
-        private string GetSorting(IEnumerable<string> sortKeys)
+        private IEnumerable<SortObject> GetSortObjects(IEnumerable<string> sortKeys)
         {
-            var expression = "";
+            var list = new List<SortObject>();
+
+            var fields = new List<string>();
+            var directions = new List<string>();
 
             foreach (var sortKey in sortKeys)
             {
                 if (sortKey.Contains("field"))
-                    expression += GetQueryStringValue(sortKey) + " ";
+                    fields.Add(GetQueryStringValue(sortKey));
 
                 if (sortKey.Contains("dir"))
-                    expression += GetQueryStringValue(sortKey) + ", ";
+                    directions.Add(GetQueryStringValue(sortKey));
             }
 
-            if (expression.Length > 2)
-                return expression.Substring(0, expression.Length - 2);
+            foreach (var field in fields)
+            {
+                var index = fields.IndexOf(field);
+                var direction = directions[index];
+                var obj = new SortObject(field, direction);
+                list.Add(obj);
+            }
 
-            return "true";
+            return list;
         }
 
-        private string GetFiltering(IList<string> filterKeys, string filterLogic)
+        private FilterObjectWrapper GetFilterObjects(IList<string> filterKeys, string filterLogic)
         {
-            var filter = "";
+            var list = new List<FilterObject>();
 
             var fieldKeys = from x in filterKeys
                             where x.Contains("field")
                             select x;
-
-            var iteration = 0;
 
             var indexList = GetIndexArr(fieldKeys);
 
@@ -86,7 +93,7 @@ namespace KendoGridBinder
                                    !x.Contains("logic")
                              select x).ToList();
 
-                var filterQueryObject = new FilterQueryObject
+                var filterObject = new FilterObject
                 {
                     Field1 = GetQueryStringValue(group[0]),
                     Operator1 = GetQueryStringValue(group[1]),
@@ -95,24 +102,16 @@ namespace KendoGridBinder
 
                 if (group.Count == 6)
                 {
-                    filterQueryObject.Field2 = GetQueryStringValue(group[3]);
-                    filterQueryObject.Operator2 = GetQueryStringValue(group[4]);
-                    filterQueryObject.Value2 = GetQueryStringValue(group[5]);
-                    filterQueryObject.Logic = GetValue(filterKeys, index, "logic");
+                    filterObject.Field2 = GetQueryStringValue(group[3]);
+                    filterObject.Operator2 = GetQueryStringValue(group[4]);
+                    filterObject.Value2 = GetQueryStringValue(group[5]);
+                    filterObject.Logic = GetValue(filterKeys, index, "logic");
                 }
 
-                if (iteration != 0)
-                    filter = filter + " " + filterLogic + " " + filterQueryObject.Query;
-                else
-                    filter = filterQueryObject.Query;
-
-                iteration++;
+                list.Add(filterObject);
             }
 
-            if (string.IsNullOrEmpty(filter))
-                filter = "true";
-
-            return filter;
+            return new FilterObjectWrapper(filterLogic, list);
         }
 
         private IEnumerable<int> GetIndexArr(IEnumerable<string> fieldKeys)
@@ -127,7 +126,7 @@ namespace KendoGridBinder
                                where x == index
                                select x;
 
-                if (existing.Count() == 0)
+                if (!existing.Any())
                 {
                     list.Add(index);
                 }

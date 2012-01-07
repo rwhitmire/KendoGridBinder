@@ -1,3 +1,7 @@
 _ReSharper.KendoGridBinder
-KendoGridBinder.6.1.ReSharper.user
+*.ReSharper.user
 packages
+KendoGridBinder.Examples/bin
+KendoGridBinder.Examples/obj
+KendoGridBinder/bin
+KendoGridBinder/obj

@@ -23,7 +23,6 @@ C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBin
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\MvcMiniProfiler.dll
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\MvcMiniProfiler.EntityFramework.dll
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\WebActivator.dll
-C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\Dynamic.dll
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\AutoMapper.xml
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\EntityFramework.xml
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\MvcMiniProfiler.pdb
@@ -33,3 +32,4 @@ C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBin
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\obj\Debug\KendoGridBinder.Examples.dll
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\obj\Debug\KendoGridBinder.Examples.pdb
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\KendoGridBinder.pdb
+C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\Dynamic.dll

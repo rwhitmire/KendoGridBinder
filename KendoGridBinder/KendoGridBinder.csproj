@@ -58,6 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\KendoModelBinding.cs" />
+    <Compile Include="Containers\FilterObject.cs" />
+    <Compile Include="Containers\FilterObjectWrapper.cs" />
+    <Compile Include="Containers\SortObject.cs" />
     <Compile Include="FilterQueryObject.cs" />
     <Compile Include="KendoGrid.cs" />
     <Compile Include="KendoGridModelBinder.cs" />
