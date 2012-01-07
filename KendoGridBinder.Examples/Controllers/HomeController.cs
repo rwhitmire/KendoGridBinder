@@ -7,7 +7,16 @@ namespace KendoGridBinder.Examples.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly Repository _repository = new Repository();
+        private readonly IEmployeeRepository _employeeRepository;
+
+        public HomeController() : this(new EmployeeRepository())
+        {
+        }
+
+        public HomeController(IEmployeeRepository employeeRepository)
+        {
+            _employeeRepository = employeeRepository;
+        }
 
         public ActionResult Index()
         {
@@ -21,7 +30,7 @@ namespace KendoGridBinder.Examples.Controllers
 
         public ActionResult Test()
         {
-            var employees = _repository.GetEmployees();
+            var employees = _employeeRepository.All;
             return View(employees);
         }
 
@@ -29,7 +38,7 @@ namespace KendoGridBinder.Examples.Controllers
         public JsonResult Grid(KendoGridRequest request)
         {
             Mapper.CreateMap<Employee, EmployeeDto>();
-            var employees = _repository.GetEmployees();
+            var employees = _employeeRepository.All;
             var dto = Mapper.Map<IEnumerable<Employee>, IEnumerable<EmployeeDto>>(employees);
             var grid = new KendoGrid<EmployeeDto>(request, dto);
             return Json(grid);
