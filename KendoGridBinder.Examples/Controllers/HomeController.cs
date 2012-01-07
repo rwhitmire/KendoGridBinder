@@ -19,6 +19,12 @@ namespace KendoGridBinder.Examples.Controllers
             return View();
         }
 
+        public ActionResult Test()
+        {
+            var employees = _repository.GetEmployees();
+            return View(employees);
+        }
+
         [HttpPost]
         public JsonResult Grid(KendoGridRequest request)
         {
