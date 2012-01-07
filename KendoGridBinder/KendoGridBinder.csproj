@@ -61,7 +61,6 @@
     <Compile Include="Containers\FilterObject.cs" />
     <Compile Include="Containers\FilterObjectWrapper.cs" />
     <Compile Include="Containers\SortObject.cs" />
-    <Compile Include="FilterQueryObject.cs" />
     <Compile Include="KendoGrid.cs" />
     <Compile Include="KendoGridModelBinder.cs" />
     <Compile Include="KendoGridRequest.cs" />
