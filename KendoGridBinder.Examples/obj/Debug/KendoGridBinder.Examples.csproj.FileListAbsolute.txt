@@ -34,3 +34,5 @@ C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBin
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\KendoGridBinder.pdb
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\Dynamic.dll
 C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\App_Data\KendoData.sdf
+C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\System.Data.SqlServerCe.dll
+C:\Users\Ryan\Documents\Visual Studio 2010\Projects\KendoGridBinder\KendoGridBinder.Examples\bin\System.Data.SqlServerCe.Entity.dll
