@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic;
 
@@ -100,6 +101,13 @@ namespace KendoGridBinder
             {
                 param = @"""" + param.ToLower() + @"""";
                 caseMod = ".ToLower()";
+            }
+
+            if(dataType == "datetime")
+            {
+                var date = DateTime.Parse(param);
+                var str = string.Format("DateTime({0}, {1}, {2})", date.Year, date.Month, date.Day);
+                param = str;
             }
 
             string exStr;
