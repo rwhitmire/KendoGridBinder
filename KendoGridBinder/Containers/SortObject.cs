@@ -1,6 +1,6 @@
 ﻿namespace KendoGridBinder.Containers
 {
-    internal class SortObject
+    public class SortObject
     {
         public SortObject(string field, string direction)
         {

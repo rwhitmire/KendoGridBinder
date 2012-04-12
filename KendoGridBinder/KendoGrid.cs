@@ -41,11 +41,18 @@ namespace KendoGridBinder
                 .Take(request.Take);
         }
 
+        public KendoGrid( KendoGridRequest request, IEnumerable<T> list, int totalCount )
+        {
+            // Just use the request as a container
+            data = list;
+            total = totalCount;
+        }
+
         public IEnumerable<T> data { get; set; }
         public int total { get; set; }
 
 
-        private static string GetSorting(KendoGridRequest request)
+        public static string GetSorting(KendoGridRequest request)
         {
             var expression = "";
 
@@ -62,7 +69,7 @@ namespace KendoGridBinder
             return expression;
         }
 
-        private string GetFiltering(KendoGridRequest request)
+        public string GetFiltering( KendoGridRequest request )
         {
             var finalExpression = "";
 

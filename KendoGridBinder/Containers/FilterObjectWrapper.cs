@@ -2,7 +2,7 @@
 
 namespace KendoGridBinder.Containers
 {
-    internal class FilterObjectWrapper
+    public class FilterObjectWrapper
     {
         public FilterObjectWrapper(string logic, IEnumerable<FilterObject> filterObjects)
         {
