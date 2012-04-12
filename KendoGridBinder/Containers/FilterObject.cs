@@ -1,6 +1,6 @@
 ﻿namespace KendoGridBinder.Containers
 {
-    internal class FilterObject
+    public class FilterObject
     {
         public string Field1 { get; set; }
         public string Operator1 { get; set; }
