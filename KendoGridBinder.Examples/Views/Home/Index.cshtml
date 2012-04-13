@@ -5,14 +5,6 @@
 <div id="grid"></div>
 
 <script type="text/javascript">
-
-    var dateRegExp = /^\/Date\((.*?)\)\/$/;
-
-    function toDate(value) {
-        var date = dateRegExp.exec(value);
-        return new Date(parseInt(date[1]));
-    }
-
     $(document).ready(function () {
         var url = '@Url.Action("Grid")';
 
@@ -26,20 +18,13 @@
                     type: 'post',
                     dataType: 'json',
                     url: url
-                },
-                // annyoing work-around for adding date types to the request
-                parameterMap: function (options) {
-                    if (options.filter) {
-                        options.filter.filters[0].value = kendo.toString(options.filter.filters[0].value, "MM/dd/yyyy");
-                    }
-                    return options;
                 }
             },
             schema: {
                 data: 'data',
                 total: 'total',
                 model: {
-                    id: 'EmployeeId',
+                    id: 'Id',
                     fields: {
                         Name: { type: 'string' },
                         Email: { type: 'string' },
@@ -58,7 +43,7 @@
                 { field: 'Name', title: 'Name' },
                 { field: 'Email' },
                 { field: 'EmployeeNumber', title: 'Emplyee #' },
-                { field: 'HireDate', title: 'Hire Date', template: '#= kendo.toString(toDate(HireDate), "MM/dd/yyyy")#' },
+                { field: 'HireDate', title: 'Hire Date', format: "{0:MM/dd/yyyy}" },
                 { field: 'Active' }
             ],
             filterable: true,
@@ -68,6 +53,4 @@
             pageable: true
         });
     });
-    
-
 </script>

@@ -17,6 +17,19 @@ namespace KendoGridBinder.Examples.Models
         // 
         // System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<KendoGridBinder.Examples.Models.KendoDataContext>());
 
-        public DbSet<KendoGridBinder.Examples.Models.Employee> Employees { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+    }
+
+    public class KendoDataContextInitializer : DropCreateDatabaseIfModelChanges<KendoDataContext>
+    {
+        protected override void Seed(KendoDataContext context)
+        {
+            var employees = new List<Employee>
+                                {
+                                    new Employee{Id = 1, Active = true, Name = "Bill Smith", Email = "bsmith@email.com", EmployeeNumber = 1001, HireDate = Convert.ToDateTime("12/12/1997")}
+                                };
+
+            employees.ForEach(x => context.Employees.Add(x));
+        }
     }
 }

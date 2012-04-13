@@ -5,7 +5,7 @@ namespace KendoGridBinder.Examples.Models
 {
     public class Employee
     {
-        public int EmployeeId { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [StringLength(50)]

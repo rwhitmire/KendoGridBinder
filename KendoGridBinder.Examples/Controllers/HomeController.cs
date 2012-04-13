@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
-using AutoMapper;
+﻿using System.Web.Mvc;
 using KendoGridBinder.Examples.Models;
 
 namespace KendoGridBinder.Examples.Controllers
@@ -31,11 +29,9 @@ namespace KendoGridBinder.Examples.Controllers
         [HttpPost]
         public JsonResult Grid(KendoGridRequest request)
         {
-            Mapper.CreateMap<Employee, EmployeeDto>();
-            var employees = _employeeRepository.All;
-            var dto = Mapper.Map<IEnumerable<Employee>, IEnumerable<EmployeeDto>>(employees);
-            var grid = new KendoGrid<EmployeeDto>(request, dto);
-            return Json(grid);
+            var employees = _employeeRepository.GetAll();
+            var data = new KendoGrid<Employee>(request, employees);
+            return Json(data);
         }
     }
 }
