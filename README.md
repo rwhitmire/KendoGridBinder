@@ -1,5 +1,5 @@
 ## Install
-```
+```html
 PM> Install-Package KendoGridBinder
 ```
 
