@@ -1,7 +1,11 @@
+## Install
+```
+PM> Install-Package KendoGridBinder
+
 ## Demo
 http://kendogridbinder.apphb.com
 
-## Action
+## Action Method
 ```csharp
 [HttpPost]
 public JsonResult Grid(KendoGridRequest request)
@@ -26,7 +30,7 @@ public JsonResult Grid(KendoGridRequest request)
 
 ## Script
 ```javascript
-<script type="text/javascript">
+<script>
     var url = '@Url.Action("Grid")';
 
     var dataSource = new kendo.data.DataSource({
