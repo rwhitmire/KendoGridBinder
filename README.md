@@ -1,6 +1,7 @@
 ## Install
 ```
 PM> Install-Package KendoGridBinder
+```
 
 ## Demo
 http://kendogridbinder.apphb.com
