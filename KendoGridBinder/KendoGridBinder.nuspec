@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <version>1.4</version>
-    <authors>Ryan Whitmire</authors>
+    <authors>Ryan Whitmire, Josh Ball</authors>
     <owners />
     <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
     <projectUrl>https://github.com/rwhitmire/KendoGridBinder</projectUrl>
