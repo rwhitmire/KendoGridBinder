@@ -63,10 +63,14 @@ public JsonResult Grid(KendoGridRequest request)
     $('#grid').kendoGrid({
         dataSource: dataSource,
         height: 400,
+        columns: [
+            { field: 'FirstName', title: 'First Name' },
+            { field: 'LastName', title: 'Last Name' },
+            { field: 'Email' }
+        ],        
         filterable: true,
         sortable: true,
         pageable: true
     });
-
 </script>
 ```
