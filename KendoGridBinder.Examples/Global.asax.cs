@@ -27,7 +27,8 @@ namespace KendoGridBinder.Examples
 
         protected void Application_Start()
         {
-            Database.SetInitializer(new KendoDataContextInitializer());
+             //System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<KendoGridBinder.Examples.Models.KendoDataContext>());
+             Database.SetInitializer(new KendoDataContextInitializer());
             AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);

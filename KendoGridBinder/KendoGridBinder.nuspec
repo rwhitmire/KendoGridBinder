@@ -7,8 +7,7 @@
     <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
     <projectUrl>https://github.com/rwhitmire/KendoGridBinder</projectUrl>
     <dependencies>
-      <dependency id="DynamicQuery" version="1.0" />
-      <dependency id="WebActivator" version="1.5" />
+      <dependency id="DynamicQuery" version="1.0" />      
     </dependencies>
     <id>KendoGridBinder</id>
     <title>KendoGridBinder</title>
