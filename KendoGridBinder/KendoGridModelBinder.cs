@@ -7,7 +7,7 @@ using KendoGridBinder.Containers;
 
 namespace KendoGridBinder
 {
-    internal class KendoGridModelBinder : IModelBinder
+    public class KendoGridModelBinder : IModelBinder
     {
         private HttpRequestBase _request;
 
