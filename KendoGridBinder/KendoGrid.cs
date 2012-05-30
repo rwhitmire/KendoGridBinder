@@ -14,13 +14,11 @@ namespace KendoGridBinder
             var filtering = GetFiltering(request);
             var sorting = GetSorting(request);
 
+            total = query.Count();
+
             data = query
                 .Where(filtering)
-                .OrderBy(sorting).ToList();
-
-            total = data.Count();
-
-            data = data
+                .OrderBy(sorting)
                 .Skip(request.Skip)
                 .Take(request.Take);
         }
