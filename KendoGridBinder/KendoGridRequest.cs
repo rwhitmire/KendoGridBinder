@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Web.Mvc;
 using KendoGridBinder.Containers;
 
 namespace KendoGridBinder
 {
+    [ModelBinder(typeof(KendoGridModelBinder))]
     public class KendoGridRequest
     {
         public int Take { get; set; }
