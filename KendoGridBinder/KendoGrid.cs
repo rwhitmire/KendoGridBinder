@@ -14,13 +14,16 @@ namespace KendoGridBinder
             var filtering = GetFiltering(request);
             var sorting = GetSorting(request);
 
-            total = query.Count();
+    		var tempQuery = query
+				.Where(filtering)
+				.OrderBy(sorting);
 
-            data = query
-                .Where(filtering)
-                .OrderBy(sorting)
-                .Skip(request.Skip)
-                .Take(request.Take);
+			total = tempQuery
+			    .Count();
+
+			data = tempQuery
+				.Skip(request.Skip)
+				.Take(request.Take);
         }
 
         public KendoGrid(KendoGridRequest request, IEnumerable<T> list)
