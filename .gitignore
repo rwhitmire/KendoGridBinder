@@ -16,7 +16,6 @@ Thumbs.db
 *.cache
 *.ilk
 *.log
-*.sdf
 [Bb]in
 [Dd]ebug*/
 *.lib
@@ -27,3 +26,6 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 *ncrunch*
 packages/
+_UpgradeReport_Files/
+Backup/
+UpgradeLog.*

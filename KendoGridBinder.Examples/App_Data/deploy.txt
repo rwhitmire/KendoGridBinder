@@ -1,1 +1,0 @@
-﻿make sure app_data gets published/committed.

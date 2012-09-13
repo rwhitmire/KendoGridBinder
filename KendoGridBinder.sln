@@ -1,10 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KendoGridBinder", "KendoGridBinder\KendoGridBinder.csproj", "{D786207C-387A-4EDB-A950-E92E0D69C1B0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KendoGridBinder.Examples", "KendoGridBinder.Examples\KendoGridBinder.Examples.csproj", "{7B931CF2-F9CC-4FDC-9E3F-5D37DCD22F31}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A6398D29-1651-48BB-BB61-29884052E210}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.exe = .nuget\NuGet.exe
@@ -15,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KendoGridBinder", "KendoGridBinder\KendoGridBinder.csproj", "{D786207C-387A-4EDB-A950-E92E0D69C1B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KendoGridBinder.Examples", "KendoGridBinder.Examples\KendoGridBinder.Examples.csproj", "{7B931CF2-F9CC-4FDC-9E3F-5D37DCD22F31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
