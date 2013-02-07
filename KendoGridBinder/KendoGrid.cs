@@ -102,8 +102,12 @@ namespace KendoGridBinder
 
         private static string GetExpression(string field, string op, string param)
         {
-            var dataType = typeof (T).GetProperty(field).PropertyType.Name.ToLower();
-            var caseMod = "";
+            var p = typeof (T).GetProperty(field);
+
+            var dataType = (p.PropertyType.IsGenericType && p.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>))?
+                p.PropertyType.GetGenericArguments()[0].Name.ToLower() : p.PropertyType.Name.ToLower(); ;
+           
+         
 
             if (dataType == "string")
             {
@@ -113,7 +117,13 @@ namespace KendoGridBinder
 
             if(dataType == "datetime")
             {
-                var date = DateTime.Parse(param);
+                var i = param.IndexOf("GMT");
+                if (i > 0)
+                {
+                    param = param.Remove(i);
+                }
+                var date = DateTime.Parse(param, new CultureInfo("en-US"));
+                
                 var str = string.Format("DateTime({0}, {1}, {2})", date.Year, date.Month, date.Day);
                 param = str;
             }
