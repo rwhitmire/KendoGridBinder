@@ -6,7 +6,7 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        var url = '@Url.Action("Grid")';
+        var url = '@Url.Action(ViewBag.Callback)';
 
         var dataSource = new kendo.data.DataSource({
             serverPaging: true,
