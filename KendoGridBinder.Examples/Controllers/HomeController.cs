@@ -52,5 +52,9 @@ namespace KendoGridBinder.Examples.Controllers
 
             return Json(new KendoGrid<Employee>(employees, count));
         }
-    }
+		public ActionResult AdvancedFiltering() {
+			ViewBag.Callback = "Grid";
+			return View();
+		}
+	}
 }

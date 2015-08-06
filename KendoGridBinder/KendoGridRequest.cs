@@ -53,8 +53,8 @@ namespace KendoGridBinder
                 {
                     var expression1 = GetExpression<T>(filterObject.Field1, filterObject.Operator1, filterObject.Value1);
                     var expression2 = GetExpression<T>(filterObject.Field2, filterObject.Operator2, filterObject.Value2);
-                    var combined = string.Format("({0} {1} {2})", expression1, request.FilterObjectWrapper.LogicToken, expression2);
-                    finalExpression += combined;
+					var combined = string.Format("({0} {1} {2})", expression1, filterObject.LogicToken, expression2);
+					finalExpression += combined;
                 }
                 else
                 {

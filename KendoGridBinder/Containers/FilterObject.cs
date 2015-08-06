@@ -11,8 +11,20 @@
         public string Value2 { get; set; }
 
         public string Logic { get; set; }
+		public string LogicToken {
+			get {
+				switch (Logic) {
+					case "and":
+						return "&&";
+					case "or":
+						return "||";
+					default:
+						return null;
+				}
+			}
+		}
 
-        public bool IsConjugate
+		public bool IsConjugate
         {
             get { return (Field2 != null); }
         }
