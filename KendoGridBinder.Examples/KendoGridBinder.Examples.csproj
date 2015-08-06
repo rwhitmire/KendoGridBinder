@@ -28,6 +28,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,22 +61,50 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="MiniProfiler">
-      <HintPath>..\packages\MiniProfiler.2.0.1\lib\net40\MiniProfiler.dll</HintPath>
+    <Reference Include="MiniProfiler, Version=3.1.1.140, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>..\packages\MiniProfiler.3.1.1.140\lib\net40\MiniProfiler.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MiniProfiler.EntityFramework">
-      <HintPath>..\packages\MiniProfiler.EF.2.0.2\lib\net40\MiniProfiler.EntityFramework.dll</HintPath>
+    <Reference Include="MiniProfiler.EntityFramework, Version=3.0.11.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>..\packages\MiniProfiler.EF5.3.0.11\lib\net40\MiniProfiler.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MiniProfiler.Mvc, Version=3.0.11.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>..\packages\MiniProfiler.MVC4.3.0.11\lib\net40\MiniProfiler.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.40804.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="WebActivator, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -95,23 +124,66 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Employees.sdf" />
-    <Content Include="Content\kendo\2012.1.322\Default\editor.png" />
-    <Content Include="Content\kendo\2012.1.322\Default\imagebrowser.png" />
-    <Content Include="Content\kendo\2012.1.322\Default\loading-image.gif" />
-    <Content Include="Content\kendo\2012.1.322\Default\loading.gif" />
-    <Content Include="Content\kendo\2012.1.322\Default\slider-h.gif" />
-    <Content Include="Content\kendo\2012.1.322\Default\slider-v.gif" />
-    <Content Include="Content\kendo\2012.1.322\Default\sprite.png" />
-    <Content Include="Content\kendo\2012.1.322\kendo.common.min.css" />
-    <Content Include="Content\kendo\2012.1.322\kendo.default.min.css" />
-    <Content Include="Content\kendo\2012.1.322\textures\glass.png" />
-    <Content Include="Content\kendo\2012.1.322\textures\highlight.png" />
+    <Content Include="Content\kendo\2015.2.805\Default\editor.png" />
+    <Content Include="Content\kendo\2015.2.805\Default\imagebrowser.png" />
+    <Content Include="Content\kendo\2015.2.805\Default\indeterminate.gif" />
+    <Content Include="Content\kendo\2015.2.805\Default\loading-image.gif" />
+    <Content Include="Content\kendo\2015.2.805\Default\loading.gif" />
+    <Content Include="Content\kendo\2015.2.805\Default\loading_2x.gif" />
+    <Content Include="Content\kendo\2015.2.805\Default\markers.png" />
+    <Content Include="Content\kendo\2015.2.805\Default\markers_2x.png" />
+    <Content Include="Content\kendo\2015.2.805\Default\slider-h.gif" />
+    <Content Include="Content\kendo\2015.2.805\Default\slider-v.gif" />
+    <Content Include="Content\kendo\2015.2.805\Default\sprite.png" />
+    <Content Include="Content\kendo\2015.2.805\Default\sprite_2x.png" />
+    <Content Include="Content\kendo\2015.2.805\Default\sprite_kpi.png" />
+    <Content Include="Content\kendo\2015.2.805\Default\sprite_kpi_2x.png" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\LICENSE.txt" />
+    <Content Include="Content\kendo\2015.2.805\images\back.png" />
+    <Content Include="Content\kendo\2015.2.805\images\kendoui.svg" />
+    <Content Include="Content\kendo\2015.2.805\images\wp8_icons.png" />
+    <Content Include="Content\kendo\2015.2.805\images\wp8_inverseicons.png" />
+    <Content Include="Content\kendo\2015.2.805\kendo.common.core.min.css" />
+    <Content Include="Content\kendo\2015.2.805\kendo.common.min.css" />
+    <Content Include="Content\kendo\2015.2.805\kendo.default.min.css" />
+    <Content Include="Content\kendo\2015.2.805\textures\brushed-metal.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots1.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots10.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots11.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots12.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots13.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots2.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots3.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots4.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots5.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots6.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots7.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots8.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\dots9.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\glass-lighter.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\glass.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\highlight.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\hsv-gradient.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\hue.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\leather1.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\leather2.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\noise.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\stripe1.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\stripe2.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\stripe3.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\stripe4.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\stripe5.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\stripe6.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\transparency.png" />
+    <Content Include="Content\kendo\2015.2.805\textures\transtexture.png" />
     <Content Include="Dynamic Expressions.html" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.16.min.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\kendo\2012.1.322\kendo.web.min.js" />
+    <Content Include="Scripts\kendo\2015.2.805\kendo.web.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -139,6 +211,31 @@
       <Project>{D786207C-387A-4EDB-A950-E92E0D69C1B0}</Project>
       <Name>KendoGridBinder</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\AdvancedFiltering.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSans-Bold.ttf" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSans-BoldOblique.ttf" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSans-ExtraLight.ttf" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSans-Oblique.ttf" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSans.ttf" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSansMono-Bold.ttf" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSansMono-BoldOblique.ttf" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSansMono-Oblique.ttf" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSansMono.ttf" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSerif-Bold.ttf" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSerif-BoldItalic.ttf" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSerif-Italic.ttf" />
+    <Content Include="Content\kendo\2015.2.805\fonts\DejaVu\DejaVuSerif.ttf" />
+    <Content Include="Content\kendo\2015.2.805\images\kendoui.ttf" />
+    <Content Include="Content\kendo\2015.2.805\images\kendoui.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\kendo\2015.2.805\kendo.web.min.js.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

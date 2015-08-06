@@ -8,7 +8,7 @@ namespace KendoGridBinder.Examples.App_Start
     using System.Web.Mvc;
     using System.Linq;
     using StackExchange.Profiling;
-    using StackExchange.Profiling.MVCHelpers;
+    using StackExchange.Profiling.Mvc;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
     public static class MiniProfilerPackage

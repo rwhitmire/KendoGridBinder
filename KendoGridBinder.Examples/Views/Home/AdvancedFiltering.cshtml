@@ -1,0 +1,94 @@
+﻿@{
+	ViewBag.Title = "Advanced Filtering Example";
+}
+
+<div id="grid"></div>
+
+<script type="text/x-kendo-template" id="toolbar-template">
+	<div class="toolbar">
+		Filters:
+		<button class="k-button" onclick="filter1()">Employee Number Between 2000-3000 or Active = False</button>
+		<button class="k-button" onclick="filter2()">Hire Date Not Between 2000-2005 and Active = True</button>
+	</div>
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = '@Url.Action(ViewBag.Callback)';
+
+        var dataSource = new kendo.data.DataSource({
+            serverPaging: true,
+            serverSorting: true,
+            serverFiltering: true,
+            pageSize: 20,
+            transport: {
+                read: {
+                    type: 'post',
+                    dataType: 'json',
+                    url: url
+                }
+            },
+            schema: {
+                data: 'Data',
+                total: 'Total',
+                model: {
+                    id: 'Id',
+                    fields: {
+                        Name: { type: 'string' },
+                        Email: { type: 'string' },
+                        EmployeeNumber: { type: 'number' },
+                        HireDate: { type: 'date' },
+                        Active: { type: 'boolean' }
+                    }
+                }
+            }
+        });
+
+        $('#grid').kendoGrid({
+            dataSource: dataSource,
+            height: 400,
+            columns: [
+                { field: 'Name', title: 'Name' },
+                { field: 'Email' },
+                { field: 'EmployeeNumber', title: 'Employee #' },
+                { field: 'HireDate', title: 'Hire Date', format: "{0:MM/dd/yyyy}" },
+                { field: 'Active' }
+            ],
+            filterable: true,
+            sortable: {
+                mode: 'multiple'
+            },
+            pageable: true,
+			toolbar: kendo.template($('#toolbar-template').html())
+        });
+
+	    window.filter1 = function() {
+	    	dataSource.filter({
+	    		logic: 'or',
+	    		filters: [
+					{
+						logic: 'and',
+						filters: [
+							{ field: 'EmployeeNumber', operator: 'gte', value: 2000 },
+							{ field: 'EmployeeNumber', operator: 'lte', value: 3000 }
+						]
+					},
+					{ field: 'Active', operator: 'eq', value: false }
+	    		]
+		    });
+	    };
+
+	    window.filter2 = function() {
+	    	dataSource.filter([
+				{
+					logic: 'or',
+					filters: [
+						{ field: 'HireDate', operator: 'lt', value: '1/1/2000' },
+						{ field: 'HireDate', operator: 'gt', value: '12/31/2005' }
+					]
+				},
+				{ field: 'Active', operator: 'eq', value: true }
+	    	]);
+	    };
+    });
+</script>
